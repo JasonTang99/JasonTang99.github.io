@@ -46,7 +46,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Jason Tang
-  tagline: Machine Learning Engineer
+  tagline: ML Engineer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
@@ -55,6 +55,7 @@ plainwhite:
     # twitter: thelehhman
     github:  JasonTang99
     linkedIn: in/1999jasontang
+    email: 1999jasontang@gmail.com
     # rss: rss
     # dribbble: jekyll
     # facebook: jekyll
@@ -82,7 +83,7 @@ plainwhite:
 # - about.md
 
 # Build settings
-theme: plainwhite
+# theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
