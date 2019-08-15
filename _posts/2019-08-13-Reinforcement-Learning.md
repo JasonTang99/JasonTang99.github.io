@@ -1,13 +1,32 @@
 ---
 layout: post
-title:  "An Introduction to Reinforcement Learning"
-date:   2019-08-13 13:00:00 +0500
+title: 'An Introduction: Reinforcement Learning'
+date: 2019-08-13 13:00:00 +0500
 categories: RL Python
 ---
 
-Reinforcement Learning 
+Reinforcement Learning is currently at the forefront of artificial intelligence. Many, including myself, believe that truly general artificial intelligence will come from either RL or something we have yet to discover. I hope that through this series of blog posts I can give you an introduction into the world of RL. 
 
-### Environment Dynamics
+Hold on, where did I learn everything? Well, most of it stems from the textbook [Reinforcement Learning by Richard Sutton and Andrew Barto][rlbook], it's an great read and this entire blog post series is based on it.
+
+Now let's jump right into the basics.
+
+
+## $k$-armed Bandits
+
+No this is not about mutant highwaymen, this about slot machines and choices. Consider a slot machine (often refered to as a 1-armed Bandit), but in this case, it has $k$ levers to pull, each leading to a play on the machine with different, independent odds of winning. In order to maximize one's winnings over repeated plays, one would seek out the highest performing levers and keep pulling them. 
+
+Out of our $k$ choices of levers to pull, each one has an expected value of what reward we will get. Let's denote the action at time $t$ as $A_t$, and the reward from it as $R_{t+1}$ (the time is different since technically the reward occurs in the next time step but you'll see it expressed both ways). We define the quality of action $a$ as the expected reward from taking action $a$:
+
+$$q_*(a) = \mathbb{E}[R_{t+1}|A_t=a]$$
+
+Where the $*$ represents the optimal (true) of action value function, generally we don't have this so we denote it as $q(a)$. 
+
+At any time step, there must be an estimated value that is the largest. Always choosing that one is known as *exploiting*, and to choose any non maximally estimated choices is *exploring*.
+
+## Environment Dynamics
+
+
 
 MDP leads to a sequence:
 
@@ -132,11 +151,9 @@ These processes complete before the other runs. In Value iteration, we only do o
 
 Generalized Policy Iteration (GPI), means the general idea of letting policy evaluation and policy improvement interact, independent of their granularity. Most of RL methods fall under this. And once they processes become stable, we must have reached the optimal state and policy.
 
+### Additional Notes
 
+For a deeper dive on Artificial Intelligence, check out this [WaitButWhy][wbw] blog post.
 
-```python
-int Razorpay = require('razorpay');
-```
-Check out the [Jekyll docs][jekyll-docs].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
+[rlbook]: http://incompleteideas.net/book/RLbook2018.pdf
+[wbw]: https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html

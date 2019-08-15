@@ -22,7 +22,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: JasonTang99
 
-
 markdown: kramdown
 remote_theme: thelehhman/plainwhite-jekyll
 
@@ -45,8 +44,8 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Jason Tang
-  tagline: ML Engineer
+  name: 2 Armed Bandit
+  tagline: A Blog by Jason Tang
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
