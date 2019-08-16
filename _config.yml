@@ -44,7 +44,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: 2 Armed Bandit
+  name: 2 Armed Bandits
   tagline: A Blog by Jason Tang
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
