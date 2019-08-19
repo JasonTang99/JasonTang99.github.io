@@ -5,13 +5,11 @@ date: 2019-08-13 13:00:00 +0500
 categories: RL Python
 ---
 
+In the previous part we outlined the basics of the value function estimation and how to choose actions from it. Today we will more formally define a general representation of an environment and generate a policy from it.
+
 For the previous parts:
 
 Part 1: [Reinforcement Learning]({{ site.baseurl }}{% post_url 2019-08-13-Reinforcement-Learning %})
-
-## Summary
-
-In the previous part we outlined the basics of the value function estimation and how to choose actions from it. Today we will more formally define a general representation of an environment and generate a policy from it.
 
 ## Markov Decision Processes
 
