@@ -25,12 +25,12 @@ $$
 \forall s\in S, \forall a \in A(s), \sum_{s'\in S} \sum_{r\in R} p(s',r|s,a) = 1
 $$
 
-The probabilites given by $p$ characterizes the entire environment's dynamics.
+The split between environment and agent is generally defined as the limit of absolute control, even things like motors and muscles are sometimes considered part of the environment. The representations of the states and actions vary wildly between different situations and have a strong impact on the performance of the algorithm. 
 
-There are several other forms of representing $p$:
-<!-- State Transition Probabilities
+<!-- There are several other forms of representing $p$ that are sometimes useful:
+State Transition Probabilities
 Expected rewards for State-Action Pairs
-Expected Rewards for State - Action - Next-State triples:} -->
+Expected Rewards for State - Action - Next-State triples:}
 
 $$
 \begin{align}
@@ -38,9 +38,9 @@ $$
     r(s,a) &= \sum_{r\in R}r \sum_{s'\in S}p(s',r|s,a) \\
     r(s,a) &= \sum_{r\in R}r \frac{p(s',r|s,a)}{p(s'|s,a)} \\
 \end{align}
-$$
+$$ -->
 
-## Rewards
+## Goals and Rewards
 
 We denote expected return for future rewards with respect to time $t$ as $G_t$. The task is not necessarily episodic so we use discounting, with rate $\gamma$ between 0 and 1:
 
