@@ -83,6 +83,11 @@
             color: #dce4f5;
         }
 
+        /* Hide mobile spacer on desktop */
+        .mobile-spacer {
+            display: none;
+        }
+
         /* Stack vertically on small screens */
         @media (max-width: 480px) {
             .grid-card {
@@ -103,9 +108,16 @@
                 display: none;
             }
 
-            .spacer {
-                height: 0.6rem;
+            /* Hide empty left cells */
+            .cell-left:empty {
+                display: none;
             }
+
+            /* Reorder: name, subtitle, spacer, then all links */
+            .name { order: 1; }
+            .subtitle { order: 2; }
+            .mobile-spacer { display: block; height: 0.8rem; width: 100%; order: 3; }
+            .cell-right { order: 4; }
         }
     </style>
 </head>
@@ -136,6 +148,9 @@
         <span class="cell-left"></span>
         <span class="cell-slash">/</span>
         <span class="cell-right"><a href="https://2armedbandits.github.io/" target="_blank">blog</a></span>
+
+        <!-- Mobile-only spacer between info and links -->
+        <div class="mobile-spacer"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
